@@ -12,9 +12,20 @@ font-size:30px;
 font-weight:bold;
 align-self:end;
 }
+
 .login-button{
+justify-self:end;
 align-self:center;
+margin-right:1em;
 }
+
+input[type="submit"]{
+background-color:darkblue;
+color:white;
+border-radius:5px;
+font-weight:bold;
+}
+
 .pass-column > a{
 text-decoration:none;
 color:white;
@@ -22,15 +33,39 @@ color:white;
 .nav-item{
 padding:5px;
 }
+
+@media (max-width:600px){
+.container{
+display:grid;
+grid-template:1fr 1fr 1fr 1fr/1fr;
+justify-items:center;
+transition:all 0.8s;
+margin-top:-100%;
+}
+.login-button{
+justify-self:center;
+}
+#navbar-checkbox{
+background-color:darkblue;
+width:100%;
+}
+#navbar-checkbox:checked ~ .container{
+margin-top:0;
+}
+}
+
 </style>
 </head>
 <body>
+<nav class="navbar">
+<input type="checkbox" id="navbar-checkbox">
 <div class="container">
 <div class="nav-item logo">fakebook</div>
 <div class="nav-item name-column">
 <label for="email">Email</label><br>
 <input type="text" id="name"><br>
-<input type="checkbox">Keep me logged in
+<input type="checkbox" id="checkbox_id">
+<label for="checkbox_id">Keep me logged in</label>
 </div>
 <div class="nav-item pass-column">
 <label for="password">Password</label><br>
@@ -41,5 +76,6 @@ padding:5px;
 <input type="submit" value="Log in">
 </div>
 </div>
+</nav>
 </body>
 </html>
