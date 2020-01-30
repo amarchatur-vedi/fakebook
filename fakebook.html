@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+.container{
+display:grid;
+grid-template:1fr/5fr 1fr 1fr 1fr;
+background-color:darkblue;
+color:white;
+}
+.logo{
+font-size:30px;
+font-weight:bold;
+align-self:end;
+}
+.login-button{
+align-self:center;
+}
+.pass-column > a{
+text-decoration:none;
+color:white;
+}
+.nav-item{
+padding:5px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="nav-item logo">fakebook</div>
+<div class="nav-item name-column">
+<label for="email">Email</label><br>
+<input type="text" id="name"><br>
+<input type="checkbox">Keep me logged in
+</div>
+<div class="nav-item pass-column">
+<label for="password">Password</label><br>
+<input type="password" id="password"><br>
+<a href="#">Forgot your password?</a>
+</div>
+<div class="nav-item login-button">
+<input type="submit" value="Log in">
+</div>
+</div>
+</body>
+</html>
