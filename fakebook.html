@@ -1,31 +1,56 @@
 <html>
 <head>
 <style>
+    body{
+        margin: auto;
+        font-family: sans-serif;
+    }
 .container{
 display:grid;
-grid-template:1fr/5fr 1fr 1fr 1fr;
-background-color:darkblue;
+grid-template:1fr/4fr 1fr 1fr 1fr;
+background-color:#4267B2;
 color:white;
 }
 .logo{
-font-size:30px;
+font-size:45px;
+margin-top: 17px;
 font-weight:bold;
-align-self:end;
+align-self:center;
+margin-left: 4em;
 }
 
 .login-button{
-justify-self:end;
 align-self:center;
-margin-right:1em;
 }
-
+input[type="text"]{
+    width: 160px;
+    height: 22px;
+    border: 1px solid black;
+}
+input[type="password"]{
+    width: 160px;
+    height: 22px;
+    border: 1px solid black;
+}
 input[type="submit"]{
-background-color:darkblue;
+background-color:#4267B2;
 color:white;
-border-radius:5px;
+border-radius:2px;
+border: 1px solid darkblue;
 font-weight:bold;
+padding-top: 3px;
+padding-bottom: 3px;
+margin-top: 0.6em;  
+font-size: 12px;
 }
-
+.pass-column{
+    margin-top: 0.6em;  
+    font-size: 12px;
+}
+.name-column{
+    margin-top: 0.6em;  
+    font-size: 12px;
+}
 .pass-column > a{
 text-decoration:none;
 color:white;
@@ -37,20 +62,15 @@ padding:5px;
 @media (max-width:600px){
 .container{
 display:grid;
-grid-template:1fr 1fr 1fr 1fr/1fr;
+grid-template:1fr 1fr/1fr 1fr 1fr;
 justify-items:center;
-transition:all 0.8s;
-margin-top:-100%;
+}
+.logo{
+margin-left: 0;
 }
 .login-button{
-justify-self:center;
-}
-#navbar-checkbox{
-background-color:darkblue;
-width:100%;
-}
-#navbar-checkbox:checked ~ .container{
-margin-top:0;
+    grid-column: 1/4;
+    justify-self: right;
 }
 }
 
@@ -58,11 +78,10 @@ margin-top:0;
 </head>
 <body>
 <nav class="navbar">
-<input type="checkbox" id="navbar-checkbox">
 <div class="container">
 <div class="nav-item logo">fakebook</div>
 <div class="nav-item name-column">
-<label for="email">Email</label><br>
+<label for="email">Email or Phone</label><br>
 <input type="text" id="name"><br>
 <input type="checkbox" id="checkbox_id">
 <label for="checkbox_id">Keep me logged in</label>
@@ -73,7 +92,7 @@ margin-top:0;
 <a href="#">Forgot your password?</a>
 </div>
 <div class="nav-item login-button">
-<input type="submit" value="Log in">
+<input type="submit" value="Log In">
 </div>
 </div>
 </nav>
